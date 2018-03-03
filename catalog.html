@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Девайс</title>
+	<link src="#">
+  </head>
+    
+  <body>
+      
+    <header class="page-header">
+      <nav class="page-navigation">
+        <a class="page-header-logo" href="#">
+<!--            Или логотип как <p></p> ?-->
+               <img src="" alt="Логотип" width="168" height="54">
+        </a>
+        <form action="catalog.html" metod="post">
+            <label>
+                <input type="search" name="search" value="Поиск по сайту">
+                <input class="search search-btn" type="submit" value="Найти">
+            </label>
+          </form>
+        <ul class="site-navigation">
+          <li><a href="catalog.htm">Каталог товаров</a></li>
+            <ul class="view">
+                <li><a href="catalog.htm/view/virtual_reality">Виртуальная реальность</a></li>
+                <li><a href="catalog.htm/view/monopod">Моноподы для селфи</a></li>
+                <li><a href="catalog.htm/view/action_cameras">Экшн-камеры</a></li>
+            </ul>
+            <ul class="fitness">
+                <li><a href="catalog.htm/fitness/fitness_wristlet">Фитнес-браслеты</a></li>
+                <li><a href="catalog.htm/fitness/smart_watch">Умные часы</a></li>
+            </ul>
+            <ul class="quadrocopter">
+                <li><a href="catalog.htm/quadrocopter">Квадракоптеры</a></li>
+            </ul>
+          <li><a href="#">Доставка</a></li>      
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <ul class="user-navigation">
+            <li class="user-login"><a href="#">Валентин Петухов</a></li>
+            <li class="login-out"><a href="#">Выйти</a></li>
+            <li class="compare"><a href="#">Сравнить</a></li>
+            <li class="basket"><a href="#">Корзина</a></li>
+        </ul>
+      </nav>
+    </header>
+
+	<main class="container">
+        
+        <h1 class="monopod">Моноподы для селфи</h1>
+        
+        <section class="breadcrumbs">
+            <h2 class="visually-hidden">Хлебные крошки</h2>
+            <a href="item.html">Главная</a>
+            <a href="catalog.html">Каталог товара</a>
+            <a href="catalog.htm/view/monopod">Моноподы для селфи</a>
+        </section>
+        
+        <section class="filter">
+            <h2 class="filter">Фильтр</h2>
+            <ul>
+                <li class="cost">Стоимость</li>
+                <li class="color">Цвет</li>
+                <li class="bluetooth">Bluetooth</li>
+            </ul>
+            <a href="#" class="btn show">Показать</a>
+        </section>
+        
+        <section class="sorting">
+            <h2 class="sorting">Сортировка</h2>
+            <ul class="sorting">
+                <li class="sorting-price"><a href="#">По цене</a></li>
+                <li class="sorting-type"><a href="#">По типу</a></li>
+                <li class="sorting-popular"><a href="#">По популярности</a></li>
+            </ul>
+        </section>
+        
+        <section class="catalog">
+            <h2 class="visually-hidden">Перечень товаров</h2>
+            <figure class="catalog-content">
+                <div class="catalog-item">
+                    <a href="#" class="catalog-item"><img src="#" alt="Любительская селфи-палка" width="360" height="380" ></a>
+                    <h3>Любительская селфи-палка</h3>
+                    <b>500 руб.</b>
+                </div>
+                <div class="catalog-item">
+                    <a href="#" class="catalog-item"><img src="#" alt="Профессиональная селфи-палка" width="360" height="380" ></a>
+                    <h3>Профессиональная селфи-палка</h3>
+                    <b>1 500 руб.</b>
+                </div>
+                <div class="catalog-item">
+                    <a href="#" class="catalog-item"><img src="#" alt="Непотопляемая селфи-палка" width="360" height="380" ></a>
+                    <h3>Непотопляемая селфи-палка</h3>
+                    <b>2 500 руб.</b>
+                </div>
+                <div class="catalog-item">
+                    <a href="#" class="catalog-item"><img src="#" alt="Селфи-палка «Следуй за мной»" width="360" height="380" ></a>
+                    <h3>Селфи-палка «Следуй за мной»</h3>
+                    <b>4 900 руб.</b>
+                </div>
+            </figure>
+        </section>
+        
+        <section class="switch">
+            <h2 class="switch"></h2>
+            <a href="#"><span class="button button-back">Назад</span></a>
+            <a href="#"><span class="button button-first-page">1</span></a>
+            <a href="#"><span class="button button-second-page">2</span></a>
+            <a href="#"><span class="button button-third-page">3</span></a>
+            <a href="#"><span class="button button-next">Вперед</span></a>
+        </section>
+        
+    </main>
+      
+      <footer class="page-footer">
+        
+        <a href="#" class="page-footer-logo">
+            <!--            Или логотип как <p></p> ?-->
+            <img src="" alt="Логотип" width="167" height="54">
+	    </a>
+        
+        <p>г. Москва, ул. Строителей, 15</p>
+        
+        <section class="page-footer-social">
+            <ul>
+                <li><a class="social-button" href="#">Фейсбук</a></li>
+                <li><a class="social-button" href="#">Инстаграм</a></li>
+                <li><a class="social-button" href="#">Твитер</a></li>
+            </ul>
+        </section>
+        
+        <section class="page-footer-service">
+            <ul>
+                <li><a href="#">Доставка</a></li>      
+                <li><a href="#">Гарантия</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </section>
+        
+        <section class="page-footer-navigation">
+            <ul class="user-navigation">
+                <li class="user-login"><a href="#">Валентин Петухов</a></li>
+                <li class="login-out"><a href="#">Выйти</a></li>
+                <li class="compare"><a href="#">Сравнить</a></li>
+                <li class="basket"><a href="#">Корзина</a></li>
+            </ul>
+        </section>
+        
+        <p>Тел.: +7 (495) 495-95-95</p>
+        
+	</footer>
+    <script></script>
+  </body>
+    
+</html>
