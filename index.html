@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
@@ -13,14 +12,16 @@
 
     <a class="header-logo">
         <img src="img/logo-header.png" alt="Логотип" width="167" height="54">
-      </a>
+    </a>
 
-    <form action="catalog.html" method="post">
-      <label><input type="search" name="search" value="Поиск по сайту"></label>
-      <label><input class="search search-btn" type="submit" value="Найти"></label>
+    <form class="site-search" action="http://echo.htmlacademy.ru" method="get">
+      <label for="search-field" area-label="Поиск по сайту"></label>
+        <input type="search" name="search" id="search-field" value="" placeholder="Поиск по сайту">
+        <input type="submit" value="Найти">
     </form>
 
     <nav class="page-navigation">
+      <h2 class="visually-hidden">Навигация по сайту</h2>
       <ul class="site-navigation">
         <li><a href="catalog.htm">Каталог товаров</a>
           <ul class="site-navigation view">
@@ -42,17 +43,20 @@
       </ul>
     </nav>
 
-    <ul class="user-navigation">
+    <section class="user-menu">
+      <h2 class="visually-hidden">Меню пользователя</h2>
+    <ul>
       <li class="login-link"><a href="#">Войти</a></li>
       <li class="compare"><a href="#">Сравнить</a></li>
       <li class="basket"><a href="#">Корзина</a></li>
     </ul>
+    </section>
 
   </header>
 
   <main class="container">
 
-    <h1 class="visually-hidden">Магазин "Девайс"</h1>
+    <h1 class="visually-hidden">Магазин электронных гаджетов "Девайс"</h1>
 
     <section class="popular">
       <h2 class="visually-hidden">Популярные товары</h2>
@@ -123,11 +127,14 @@
 
     <section class="service">
       <h2 class="visually-hidden">Услуги</h2>
+
       <div class="service-controls">
-        <h2>Доставка</h2>
-        <h2>Гарантия</h2>
-        <h2>Кредит</h2>
+        <h3>Доставка</h3>
+        <h3>Гарантия</h3>
+        <h3>Кредит</h3>
       </div>
+
+
       <div class="service-content">
         <div class="delivery">
           <h3>Доставка</h3>
@@ -175,27 +182,40 @@
       <a class="btn write-us" href="#">Напишите нам</a>
     </section>
 
-    <!--
-  <section class="write-us"> Здесь будет форма обратной связи
-  </section>
--->
+    <section class="modal modal-map">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <div>
+        <img src="img//map-big.png" width="960" height="559" alt="Магазин расположен по адресу г. Москва, ул. Строителей, 15">
+      </div>
+      <button class="modal-map-close" type="button">Закрыть</button>
+    </section>
 
-    <!--
-  <section class="map">Здесть будет форма карты
-  </section>
--->
+    <section class="modal modal-feedback">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <form class="feedback-form" action="http://echo.htmlacademy.ru" method="post">
+        <label for="feedback-user-name">Ваше имя:</label>
+        <label for="feedback-email">Ваш e-mail:</label>
+        <br>
+        <input type="text" name="user-name" id="feedback-user-name" value="" placeholder="Имя Фамилия">
+        <input type="email" name="email" id="feedback-email" value="" placeholder="email@example.com"><br>
+        <label for="feedback-field">Текст письма:</label><br>
+        <textarea name="feedback-field" id="feedback-field" rows="10" placeholder="В свободной форме"></textarea><br>
+        <input type="submit" value="Отправить">
+      </form>
+      <button class="modal-feedback-close" type="button">Закрыть</button>
+    </section>
 
   </main>
 
   <footer class="page-footer">
 
-    <a class="page-footer-logo" href="#">
+    <a class="footer-logo">
         <img src="img/logo-footer.png" alt="Логотип" width="167" height="54">
-      </a>
+    </a>
 
     <p>г. Москва, ул. Строителей, 15</p>
 
-    <section class="page-footer-social">
+    <section class="footer-social">
       <h2 class="visually-hidden">Мы в соц.сетях</h2>
       <ul>
         <li><a class="social-button" href="#">Фейсбук</a></li>
@@ -204,7 +224,7 @@
       </ul>
     </section>
 
-    <section class="page-footer-service">
+    <section class="footer-service">
       <h2 class="visually-hidden">Навигация по сайту</h2>
       <ul>
         <li><a href="#">Доставка</a></li>
@@ -213,17 +233,18 @@
       </ul>
     </section>
 
-    <section class="page-footer-navigation">
-      <h2 class="visually-hidden">Навигация пользователя</h2>
-      <ul class="user-navigation">
-        <li class="login-link"><a href="#">Войти</a></li>
-        <li class="compare"><a href="#">Сравнить</a></li>
-        <li class="basket"><a href="#">Корзина</a></li>
-      </ul>
+    <section class="footer-user-menu">
+      <h2 class="visually-hidden">Меню пользователя</h2>
+    <ul>
+      <li class="login-link"><a href="#">Войти</a></li>
+      <li class="compare"><a href="#">Сравнить</a></li>
+      <li class="basket"><a href="#">Корзина</a></li>
+    </ul>
     </section>
 
+
     <p>Тел.: +7 (495) 495-95-95</p>
-    <a class="logo-html-academy" href="https://htmlacademy.ru/intensive/htmlcss"></a>
+    <a class="logo-html-academy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
 
   </footer>
   <script></script>
