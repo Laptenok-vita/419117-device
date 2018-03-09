@@ -67,18 +67,11 @@
 
     <section class="filter">
       <h2 class="filter">Фильтр</h2>
-
-      <div>
         <form action="http://echo.htmlacademy.ru" method="post">
           <fieldset>
             <legend>Стоимость</legend>
             <input type="range" min="0" max="10000" step="1000">
           </fieldset>
-        </form>
-      </div>
-
-      <div class="color">
-        <form action="http://echo.htmlacademy.ru" method="post">
           <fieldset>
             <legend>Цвет</legend>
             <input class="visually-hidden" type="checkbox" name="color-black" id="black" checked>
@@ -96,23 +89,16 @@
             <input class="visually-hidden" type="checkbox" name="color-pink" id="pink">
             <label for="pink">Розовый</label>
           </fieldset>
-        </form>
-      </div>
-
-      <div class="bluetooth">
-        <form action="http://echo.htmlacademy.ru" method="post">
           <fieldset>
             <legend>Bluetooth</legend>
-            <input type="radio" name="bluetooth" id="there-is" value="there-is" checked>
-            <label for="there-is">Есть</label>
+            <input type="radio" name="bluetooth" id="yes" value="yes" checked>
+            <label for="yes">Есть</label>
             <br>
-            <input type="radio" name="bluetooth" id="there-is-not" value="there-is-not">
-            <label for="there-is-not">Нет</label>
+            <input type="radio" name="bluetooth" id="no" value="no">
+            <label for="no">Нет</label>
           </fieldset>
+          <input type="submit" value="Показать">
         </form>
-      </div>
-
-      <a class="btn show" href="#">Показать</a>
     </section>
 
     <section class="sorting">
