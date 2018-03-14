@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
-  <link href="#" rel="stylesheet" type="text/css">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
     <form class="site-search" action="http://echo.htmlacademy.ru" method="get">
       <label class="visually-hidden" for="search-field">Поиск по сайту</label>
         <input type="search" name="search" id="search-field" value="" placeholder="Поиск по сайту">
-        <input type="submit" value="Найти">
+        <input class="search-button" type="submit" value="Найти">
     </form>
 
     <nav class="page-navigation">
@@ -65,8 +66,8 @@
         <p><b>Делай селфи,<br>
             как Бен Стиллер!</b></p>
         <p>Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-        <a href="#">Подробнее</a>
-        <table class="monopod">
+        <a class="btn-more" href="#">Подробнее</a>
+        <table>
           <tr>
             <td>8,5 м</td>
             <td>5 кг</td>
@@ -84,7 +85,7 @@
         <p><b>Худеем<br>
             правильно!</b></p>
         <p>Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
-        <a href="#">Подробнее</a>
+        <a class="btn-more" href="#">Подробнее</a>
         <table class="fitness-watch">
           <tr>
             <td>48 часов</td>
@@ -99,7 +100,7 @@
         <p><b>Порхает как бабочка,<br>
             жалит как пчела!</b></p>
         <p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
-        <a href="#">Подробнее</a>
+        <a class="btn-more" href="#">Подробнее</a>
         <table class="quadrupter">
           <tr>
             <td>800 м</td>
@@ -128,24 +129,23 @@
     <section class="service">
       <h2 class="visually-hidden">Услуги</h2>
 
-      <div class="service-controls">
-        <h3>Доставка</h3>
-        <h3>Гарантия</h3>
-        <h3>Кредит</h3>
-      </div>
-
+      <ul class="service-controls">
+        <li>Доставка</li>
+        <li>Гарантия</li>
+        <li>Кредит</li>
+      </ul>
 
       <div class="service-content">
         <div class="delivery">
-          <h3>Доставка</h3>
+          <h2>Доставка</h2>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему<br> подъезду совершенно бесплатно! Ведь мы неплохо<br> заработаем, поднимая его на ваш этаж.</p>
         </div>
         <div class="guarantee">
-          <h3>Гарантия</h3>
+          <h2>Гарантия</h2>
           <p>Если из-за возгорания купленного у нас товара у вас сгорит<br> дом — не переживайте, мы выдадим вам новый.<br> Товар, не дом, конечно же.</p>
         </div>
         <div class="credit">
-          <h3>Кредит</h3>
+          <h2>Кредит</h2>
           <p>Залезть в долговую яму стало проще! Кредитные<br> консультанты подберут для вас наиболее выгодные<br> условия кредита. Выгодные для нашего банка, разумеется.</p>
         </div>
       </div>
@@ -154,13 +154,14 @@
     <section class="logotypes">
       <h2 class="visually-hidden">Логотипы</h2>
       <ul>
-        <li class="logo-1"></li>
-        <li class="logo-2"></li>
-        <li class="logo-3"></li>
-        <li class="logo-4"></li>
+        <li><img src="img/logo-1_color.png" alt="Фирменный магазин DJI" width="260" height="100"></li>
+        <li><img src="img/logo-2_color.png" alt="SP Gadgets магазин креплений и аксессуаров для экшн-камер GoPro" width="260" height="100"></li>
+        <li><img src="img/logo-3_color.png" alt="Магазин экшн-камер GoPro" width="260" height="100"></li>
+        <li><img src="img/logo-4_color.png" alt="VIVE магазин виртуальной реальности" width="260" height="100"></li>
       </ul>
     </section>
 
+    <div class="index-columns">
     <section class="info">
       <h2>О нас</h2>
       <p>Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p>
@@ -170,7 +171,7 @@
         <li>Автотрейдинг</li>
         <li>ЖелДорЭкспедиция</li>
       </ul>
-      <a class="about" href="#">Подробнее о нас</a>
+      <a class="btn-more" href="#">Подробнее о нас</a>
     </section>
 
     <section class="contacts">
@@ -179,8 +180,9 @@
       <div class="map">
         <img src="img/map.png" alt="Карта" width="560" height="222">
       </div>
-      <a class="btn write-us" href="#">Напишите нам</a>
+      <a class="btn-more" href="#">Напишите нам</a>
     </section>
+    </div>
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
@@ -244,7 +246,9 @@
 
 
     <p>Тел.: +7 (495) 495-95-95</p>
-    <a class="logo-html-academy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+    <div class="copyrighted">
+      <a class="logo-html-academy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+    </div>
 
   </footer>
   <script></script>
