@@ -45,8 +45,33 @@ a {
   text-decoration: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 1040px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
 .page-header {
+  margin-top: 40px;
   background-color: #f7e296;
+}
+
+.header-logo {
+  margin-top: -18px;
+  width: 164px;
+  height: 36px;
+  margin-bottom: 12px;
 }
 
 .header-logo:hover {
@@ -57,7 +82,18 @@ a {
   opacity: 0.3;
 }
 
+.header-container {
+  display: flex;
+
+  align-items: center;
+  margin-bottom: 35px;
+
+  outline: 1px solid red;
+}
+
 input[type="search"] {
+  width: 355px;
+  margin-right: 95px;
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-weight: 300;
   font-size: 15px;
@@ -67,6 +103,8 @@ input[type="search"] {
   opacity: 0.3;
   background-color: #f7e296;
   border: none;
+
+  outline: 1px solid black;
 }
 
 input[type="search"]:hover {
@@ -81,9 +119,13 @@ input[type="search"]:focus {
   background-color: #f7e296;
   border: none;
   border-bottom: 2px solid #000000;
+
+  outline: 3px solid black;
 }
 
 .search-button {
+  width: 85px;
+
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-weight: 300;
   font-size: 15px;
@@ -91,7 +133,7 @@ input[type="search"]:focus {
   letter-spacing: 0.01em;
   color: #000000;
   background-color: #f7e296;
-  border: 2px solid #000000;
+  border: 2px solid transparent;
 }
 
 .search-button:hover {
@@ -104,8 +146,26 @@ input[type="search"]:focus {
   background-color: #000000;
 }
 
+.user-menu {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+}
+
 .user-menu li {
+  width: 100px;
   list-style: none;
+
+  outline: 1px solid black;
+}
+
+.login-link {
+  margin-right: 180px;
+}
+
+.compare {
+  margin-right: 20px;
 }
 
 .user-menu a {
@@ -121,6 +181,14 @@ input[type="search"]:focus {
 
 .user-menu a:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.site-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  outline: 1px solid green;
 }
 
 .site-navigation li {
@@ -142,6 +210,24 @@ input[type="search"]:focus {
 
 .site-navigation a:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.site-navigation-items {
+    display: flex;
+
+  outline: 1px solid red;
+}
+
+.site-navigation-catalog {
+  margin-right: 280px;
+}
+
+.site-navigation-delivery {
+  margin-right: 20px;
+}
+
+.site-navigation-guarantee {
+  margin-right: 100px;
 }
 
 .view a,

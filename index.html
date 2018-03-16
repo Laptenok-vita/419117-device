@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
@@ -9,49 +10,62 @@
 
 <body>
 
-  <header class="page-header">
+  <header class="container page-header ">
 
-    <a class="header-logo">
-        <img src="img/logo-header.png" alt="Логотип" width="167" height="54">
+    <a>
+        <img class="header-logo" src="img/logo-header.png" alt="Логотип" width="164" height="36">
     </a>
 
-    <form class="site-search" action="http://echo.htmlacademy.ru" method="get">
-      <label class="visually-hidden" for="search-field">Поиск по сайту</label>
+    <div class="header-container">
+      <form class="site-search" action="http://echo.htmlacademy.ru" method="get">
+        <label class="visually-hidden" for="search-field">Поиск по сайту</label>
         <input type="search" name="search" id="search-field" value="" placeholder="Поиск по сайту">
         <input class="search-button" type="submit" value="Найти">
-    </form>
+      </form>
+
+      <section>
+        <h2 class="visually-hidden">Меню пользователя</h2>
+        <ul class="user-menu">
+          <li class="login-link"><a href="#">Войти</a></li>
+          <li class="compare"><a href="#">Сравнить</a></li>
+          <li class="basket"><a href="#">Корзина</a></li>
+        </ul>
+      </section>
+
+    </div>
+
 
     <nav class="page-navigation">
       <h2 class="visually-hidden">Навигация по сайту</h2>
       <ul class="site-navigation">
-        <li><a href="catalog.html">Каталог товаров</a>
-          <ul class="site-navigation view">
-            <li><a href="catalog.html">Виртуальная реальность</a></li>
-            <li><a href="catalog.html">Моноподы для селфи</a></li>
-            <li><a href="catalog.html">Экшн-камеры</a></li>
-          </ul>
-          <ul class="site-navigation fitness">
-            <li><a href="catalog.html">Фитнес-браслеты</a></li>
-            <li><a href="catalog.html">Умные часы</a></li>
-          </ul>
-          <ul class="site-navigation quadrocopter">
-            <li><a href="catalog.html">Квадракоптеры</a></li>
-          </ul>
+
+        <li class="site-navigation-catalog"><a href="catalog.html">Каталог товаров</a>
+          <div class="site-navigation-items">
+
+            <ul class="view">
+              <li><a href="catalog.html">Виртуальная реальность</a></li>
+              <li><a href="catalog.html">Моноподы для селфи</a></li>
+              <li><a href="catalog.html">Экшн-камеры</a></li>
+            </ul>
+            <ul class="fitness">
+              <li><a href="catalog.html">Фитнес-браслеты</a></li>
+              <li><a href="catalog.html">Умные часы</a></li>
+            </ul>
+            <ul class="quadrocopter">
+              <li><a href="catalog.html">Квадракоптеры</a></li>
+            </ul>
+          </div>
         </li>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
+
+
+        <li class="site-navigation-delivery"><a href="#">Доставка</a></li>
+        <li class="site-navigation-guarantee
+"><a href="#">Гарантия</a></li>
+        <li class="site-navigation-contacts"><a href="#">Контакты</a></li>
+
       </ul>
     </nav>
 
-    <section class="user-menu">
-      <h2 class="visually-hidden">Меню пользователя</h2>
-    <ul>
-      <li class="login-link"><a href="#">Войти</a></li>
-      <li class="compare"><a href="#">Сравнить</a></li>
-      <li class="basket"><a href="#">Корзина</a></li>
-    </ul>
-    </section>
 
   </header>
 
@@ -162,26 +176,26 @@
     </section>
 
     <div class="index-columns">
-    <section class="info">
-      <h2>О нас</h2>
-      <p>Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p>
-      <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-      <ul class="transport-companies">
-        <li>Деловые Линии</li>
-        <li>Автотрейдинг</li>
-        <li>ЖелДорЭкспедиция</li>
-      </ul>
-      <a class="btn-more" href="#">Подробнее о нас</a>
-    </section>
+      <section class="info">
+        <h2>О нас</h2>
+        <p>Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+        <ul class="transport-companies">
+          <li>Деловые Линии</li>
+          <li>Автотрейдинг</li>
+          <li>ЖелДорЭкспедиция</li>
+        </ul>
+        <a class="btn-more" href="#">Подробнее о нас</a>
+      </section>
 
-    <section class="contacts">
-      <h2>Контакты</h2>
-      <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br> проверить работоспособность покупки. Всякое бывает.</p>
-      <div class="map">
-        <img src="img/map.png" alt="Карта" width="560" height="222">
-      </div>
-      <a class="btn-more" href="#">Напишите нам</a>
-    </section>
+      <section class="contacts">
+        <h2>Контакты</h2>
+        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br> проверить работоспособность покупки. Всякое бывает.</p>
+        <div class="map">
+          <img src="img/map.png" alt="Карта" width="560" height="222">
+        </div>
+        <a class="btn-more" href="#">Напишите нам</a>
+      </section>
     </div>
 
     <section class="modal modal-map">
@@ -209,7 +223,7 @@
 
   </main>
 
-  <footer class="page-footer">
+  <footer class="container page-footer">
 
     <a class="footer-logo">
         <img src="img/logo-footer.png" alt="Логотип" width="167" height="54">
@@ -237,11 +251,11 @@
 
     <section class="footer-user-menu">
       <h2 class="visually-hidden">Меню пользователя</h2>
-    <ul>
-      <li class="login-link"><a href="#">Войти</a></li>
-      <li class="compare"><a href="#">Сравнить</a></li>
-      <li class="basket"><a href="#">Корзина</a></li>
-    </ul>
+      <ul>
+        <li class="login-link"><a href="#">Войти</a></li>
+        <li class="compare"><a href="#">Сравнить</a></li>
+        <li class="basket"><a href="#">Корзина</a></li>
+      </ul>
     </section>
 
 
