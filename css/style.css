@@ -188,7 +188,7 @@ input[type="search"]:focus {
   justify-content: space-between;
   margin: 0;
   margin-bottom: 55px;
-  padding: 0;
+  padding-bottom: 165px;
   outline: 1px solid yellow;
 }
 
@@ -259,7 +259,7 @@ input[type="search"]:focus {
 }
 
 .popular {
-  margin-top: -30px;
+  margin-top: -100px;
 }
 
 .monopod {
