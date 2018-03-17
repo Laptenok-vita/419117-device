@@ -57,13 +57,17 @@ a {
 }
 
 .container {
-  width: 1040px;
+  width: 1160px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 20px;
+
+  outline: 1px solid yellow;
 }
 
 .page-header {
-  margin-top: 40px;
+  min-height: 188px;
+  margin-top: 60px;
+  padding: 0 60px;
   background-color: #f7e296;
 }
 
@@ -84,11 +88,10 @@ a {
 
 .header-container {
   display: flex;
-
   align-items: center;
   margin-bottom: 35px;
 
-  outline: 1px solid blue;
+  outline: 1px solid;
 }
 
 input[type="search"] {
@@ -148,24 +151,17 @@ input[type="search"]:focus {
 
 .user-menu {
   display: flex;
-
   margin: 0;
   padding: 0;
 }
 
 .user-menu li {
+  margin: 0;
+  padding: 0;
   width: 100px;
   list-style: none;
 
   outline: 1px solid black;
-}
-
-.login-link {
-  margin-right: 180px;
-}
-
-.compare {
-  margin-right: 20px;
 }
 
 .user-menu a {
@@ -183,18 +179,18 @@ input[type="search"]:focus {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.page-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .site-navigation {
   display: flex;
   justify-content: space-between;
-  margin: 0;
-  margin-bottom: 55px;
-  padding-bottom: 165px;
-  outline: 1px solid yellow;
+  outline: 1px solid purple;
 }
 
-.site-navigation li {
-  list-style: none;
-}
 
 .site-navigation a {
   text-transform: uppercase;
@@ -213,29 +209,21 @@ input[type="search"]:focus {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.site-navigation-items {
-  display: flex;
-  position: absolute;
-  top: 180px;
-  left: 113px;
-  outline: 1px solid blue;
-}
-
-.view {
-  top: 210px;
-  left: 60px;
-}
-
 .site-navigation-catalog {
-  margin-right: 280px;
+  position: relative;
 }
 
-.site-navigation-delivery {
-  margin-right: 20px;
+.site-navigation-items {
+  display: none;
+  position: absolute;
+  left: 0px;
+  width: 1160px;
+  min-height: 160px;
+  background: #f7e296;
 }
 
-.site-navigation-guarantee {
-  margin-right: 100px;
+.site-navigation-catalog:hover .site-navigation-items {
+  display: flex;
 }
 
 .view a,
@@ -259,12 +247,15 @@ input[type="search"]:focus {
 }
 
 .popular {
-  margin-top: -100px;
+
+  outline: 1px solid purple;
 }
 
-.monopod {
+.popular-items {
   display: flex;
-
+  justify-content: space-between;
+  margin-bottom: 105px;
+  padding: 0 20px;
   outline: 1px solid red;
 }
 
@@ -273,23 +264,23 @@ input[type="search"]:focus {
 }
 
 .description {
+  margin-top: 80px;
   outline: 1px solid green;
 }
 
-.popular b,
-.description b{
+
+.description p {
+  font-family: "Open Sans", "Helvetica", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+.description b {
   font-weight: 800;
   font-size: 47px;
   line-height: 56px;
   letter-spacing: 0.01em;
   color: #000000;
-}
-
-.popular p,
-.description p {
-  font-family: "Open Sans", "Helvetica", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.01em;
 }
 
 .btn-more {
@@ -305,14 +296,14 @@ input[type="search"]:focus {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.popular td {
+.description td {
   font-weight: 300;
   font-size: 36px;
   line-height: 48px;
   letter-spacing: 0.01em;
 }
 
-.popular th {
+.description th {
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-weight: 300;
   font-size: 13px;
@@ -320,8 +311,40 @@ input[type="search"]:focus {
   letter-spacing: 0.01em;
 }
 
-.categories li {
+.categories-goods {
+  width: 1160px;
+  outline: 1px solid blue;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
   list-style: none;
+
+  outline: 1px solid red;
+}
+
+
+
+.categories li {
+  position: relative;
+  width: 160px;
+  height: 45px;
+  padding-top: 190px;
+  outline: 1px solid purple;
+}
+
+.categories li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  background-color: #f7e296;
+  outline: 1px solid red;
 }
 
 .categories a {
@@ -497,7 +520,7 @@ form label {
   color: rgba(0, 0, 0, 1);
 }
 
-.catalog-content .catalog-item  {
+.catalog-content .catalog-item {
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
@@ -505,7 +528,7 @@ form label {
   color: #000000;
 }
 
-.catalog-item img:hover{
+.catalog-item img:hover {
   filter: opacity(0.7);
   cursor: pointer;
 }
@@ -551,7 +574,7 @@ form label {
 }
 
 .pagination-list {
-    background-color: #ebebeb;
+  background-color: #ebebeb;
 }
 
 .pagination-list li {
@@ -578,7 +601,7 @@ form label {
   background-color: #d9d9d9;
 }
 
-.pagination-item a{
+.pagination-item a {
   color: rgba(0, 0, 0, 0.3);
 }
 

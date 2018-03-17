@@ -10,13 +10,15 @@
 
 <body>
 
-  <header class="container page-header ">
+  <header class="container">
 
+    <div class="page-header">
     <a>
         <img class="header-logo" src="img/logo-header.png" alt="Логотип" width="164" height="36">
     </a>
 
     <div class="header-container">
+
       <form class="site-search" action="http://echo.htmlacademy.ru" method="get">
         <label class="visually-hidden" for="search-field">Поиск по сайту</label>
         <input type="search" name="search" id="search-field" value="" placeholder="Поиск по сайту">
@@ -37,9 +39,11 @@
 
     <nav class="page-navigation">
       <h2 class="visually-hidden">Навигация по сайту</h2>
+
       <ul class="site-navigation">
 
         <li class="site-navigation-catalog"><a href="catalog.html">Каталог товаров</a>
+
           <div class="site-navigation-items">
 
             <ul class="view">
@@ -66,6 +70,7 @@
       </ul>
     </nav>
 
+    </div>
 
   </header>
 
@@ -77,65 +82,74 @@
 
       <h2 class="visually-hidden">Популярные товары</h2>
 
-      <div class="monopod">
+      <div class="popular-items">
         <div class="photo">
-        <img src="img/slider-1.png" alt="Палка для селфи" width="384" height="486">
+          <img src="img/slider-1.png" alt="Палка для селфи" width="384" height="486">
         </div>
         <div class="description">
-        <p><b>Делай селфи,<br>
-            как Бен Стиллер!</b></p>
-        <p>Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-        <a class="btn-more" href="#">Подробнее</a>
-        <table>
-          <tr>
-            <td>8,5 м</td>
-            <td>5 кг</td>
-            <td>Карбон</td>
-          </tr>
-          <tr>
-            <th>Длина палки</th>
-            <th>Вес палки</th>
-            <th>Материал</th>
-          </tr>
-        </table>
-      </div>
+          <b>Делай селфи,<br>
+            как Бен Стиллер!</b>
+          <p>Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+          <a class="btn-more" href="#">Подробнее</a>
+          <table>
+            <tr>
+              <td>8,5 м</td>
+              <td>5 кг</td>
+              <td>Карбон</td>
+            </tr>
+            <tr>
+              <th>Длина палки</th>
+              <th>Вес палки</th>
+              <th>Материал</th>
+            </tr>
+          </table>
+        </div>
       </div>
 
-      <div class="fitness-watch">
+      <div class="popular-items">
         <img src="img/slider-2.png" alt="Фитнес часы" width="345" height="485">
-        <p><b>Худеем<br>
-            правильно!</b></p>
-        <p>Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
-        <a class="btn-more" href="#">Подробнее</a>
-        <table class="fitness-watch">
-          <tr>
-            <td>48 часов</td>
-          </tr>
-          <tr>
-            <th>Без подзарядки</th>
-          </tr>
-        </table>
+
+        <div class="description">
+          <b>Худеем<br>
+            правильно!</b>
+          <p>Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
+          <a class="btn-more" href="#">Подробнее</a>
+          <table class="fitness-watch">
+            <tr>
+              <td>48 часов</td>
+            </tr>
+            <tr>
+              <th>Без подзарядки</th>
+            </tr>
+          </table>
+        </div>
+
       </div>
-      <div class="quadrupter">
+
+      <div class="popular-items">
         <img src="img/slider-3.png" alt="Квадракоптер" width="526" height="334">
-        <p><b>Порхает как бабочка,<br>
-            жалит как пчела!</b></p>
-        <p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
-        <a class="btn-more" href="#">Подробнее</a>
-        <table class="quadrupter">
-          <tr>
-            <td>800 м</td>
-            <td>50 м</td>
-          </tr>
-          <tr>
-            <th>Дальность полета</th>
-            <th>Радиус поражения</th>
-          </tr>
-        </table>
+
+        <div class="description">
+          <b>Порхает как бабочка,<br>
+            жалит как пчела!</b>
+          <p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
+          <a class="btn-more" href="#">Подробнее</a>
+          <table class="quadrupter">
+            <tr>
+              <td>800 м</td>
+              <td>50 м</td>
+            </tr>
+            <tr>
+              <th>Дальность полета</th>
+              <th>Радиус поражения</th>
+            </tr>
+          </table>
+        </div>
+
       </div>
     </section>
 
-    <section class="categories">
+    <section class="categories-goods">
       <h2 class="visually-hidden">Категории товаров</h2>
       <ul class="categories">
         <li><a href="catalog.html">Виртуальная реальность</a></li>
