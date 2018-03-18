@@ -66,7 +66,7 @@ a {
 
 .page-header {
   min-height: 188px;
-  margin-top: 60px;
+  margin-top: 40px;
   padding: 0 60px;
   background-color: #f7e296;
 }
@@ -209,7 +209,7 @@ input[type="search"]:focus {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.site-navigation-catalog {
+.site-navigation-categories {
   position: relative;
 }
 
@@ -320,13 +320,12 @@ input[type="search"]:focus {
   display: flex;
   justify-content: space-between;
   margin: 0;
+  margin-bottom: 80px;
   padding: 0;
   list-style: none;
 
   outline: 1px solid red;
 }
-
-
 
 .categories li {
   position: relative;
@@ -359,8 +358,13 @@ input[type="search"]:focus {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.service-controls li {
+.service-controls {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.service-controls li {
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
@@ -371,6 +375,16 @@ input[type="search"]:focus {
 
 .service-controls li:active {
   color: #f7e184;
+}
+
+.service-wrapper {
+  width: 100%;
+  margin-bottom: 95px;
+  background-color: #e5e5e5;
+}
+
+.service {
+  display: flex;
 }
 
 .service-content h2,
@@ -389,7 +403,30 @@ input[type="search"]:focus {
   letter-spacing: 0.01em;
 }
 
-.logotypes li {
+.delivery {
+  position: relative;
+}
+
+.delivery::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 835px;
+  width: 136px;
+  height: 164px;
+  background-image: url("../img/delivery.svg");
+}
+
+.logotypes-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 93px;
+}
+
+.logotypes ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -401,6 +438,11 @@ input[type="search"]:focus {
 .logotypes img:hover {
   filter: grayscale(0);
   opacity: 1;
+}
+
+.index-columns {
+  display: flex;
+  margin-bottom: 80px;
 }
 
 .index-columns p {
@@ -416,6 +458,11 @@ input[type="search"]:focus {
   color: #000000;
 }
 
+.modal-map {
+  display: flex;
+  justify-content: center;
+}
+
 .modal-feedback input[type="submit"],
 .filter input[type="submit"] {
   border: none;
@@ -428,6 +475,15 @@ input[type="search"]:focus {
   letter-spacing: 0.2em;
 }
 
+button.modal-map-close {
+
+}
+
+.modal-feedback {
+  display: flex;
+  justify-content: center;
+}
+
 form label {
   font-weight: 800;
   font-size: 18px;
@@ -435,7 +491,28 @@ form label {
   color: #000000;
 }
 
+.site-map {
+  padding: 0 60px;
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  min-height: 20px;
+  margin-bottom: 50px;
+  padding: 0;
+  outline: 1px solid purple;
+}
+
+.breadcrumbs ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .breadcrumbs li {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -454,6 +531,18 @@ form label {
 
 .breadcrumbs a:active {
   color: rgba(0, 0, 0, 0.1);
+}
+
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+  outline: 1px solid blue;
+}
+
+.sorting {
+  display: flex;
+  justify-content: space-between;
+  outline: 1px solid blue;
 }
 
 .filter h3,
@@ -614,6 +703,7 @@ form label {
 }
 
 .page-footer {
+  width: 100%;
   background-color: #464646;
 }
 
@@ -623,10 +713,6 @@ form label {
 
 .footer-logo:active {
   opacity: 0.3;
-}
-
-.page-footer li {
-  list-style: none;
 }
 
 .page-footer a,
@@ -659,6 +745,12 @@ form label {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.footer-user-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .footer-user-menu a {
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-weight: 300;
@@ -672,4 +764,57 @@ form label {
 
 .footer-user-menu a:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
+  margin-top: 65px;
+
+  outline: 1px solid purple;
+}
+
+.footer-user-menu-categories {
+  display: flex;
+  justify-content: space-between;
+
+  outline: 1px solid red;
+}
+
+.footer-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  outline: 1px solid red;
+}
+
+.footer-service ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-service-categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  outline: 1px solid blue;
+}
+
+.footer-social ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  outline: 1px solid red;
+  outline: 1px solid red;
 }

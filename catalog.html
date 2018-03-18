@@ -9,56 +9,67 @@
 
 <body>
 
-  <header class="page-header">
+  <header class="container">
 
+    <div class="page-header">
     <a href="index.html">
         <img class="header-logo" src="img/logo-header.png" alt="Логотип" width="164" height="36">
       </a>
 
+      <div class="header-container">
     <form class="site-search" action="http://echo.htmlacademy.ru" method="get">
       <label class="visually-hidden" for="search-field">Поиск по сайту</label>
       <input type="search" name="search" id="search-field" value="" placeholder="Поиск по сайту">
       <input class="search-button" type="submit" value="Найти">
     </form>
 
-    <nav class="page-navigation">
-      <h2 class="visually-hidden">Навигация по сайту</h2>
-      <ul class="site-navigation">
-        <li><a>Каталог товаров</a>
-         <ul class="site-navigation view">
-            <li><a href="catalog.html">Виртуальная реальность</a></li>
-            <li><a href="catalog.html">Моноподы для селфи</a></li>
-            <li><a href="catalog.html">Экшн-камеры</a></li>
-          </ul>
-          <ul class="site-navigation fitness">
-            <li><a href="catalog.html">Фитнес-браслеты</a></li>
-            <li><a href="catalog.html">Умные часы</a></li>
-          </ul>
-          <ul class="site-navigation quadrocopter">
-            <li><a href="catalog.html">Квадракоптеры</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-    </nav>
-
-    <section class="user-menu">
+    <section>
       <h2 class="visually-hidden">Меню пользователя</h2>
-      <ul>
+      <ul class="user-menu">
         <li class="user-login"><a href="#">Валентин Петухов</a></li>
         <li class="login-out"><a href="#">Выйти</a></li>
         <li class="compare"><a href="#">Сравнить</a></li>
         <li class="basket"><a href="#">Корзина</a></li>
       </ul>
     </section>
+         </div>
 
+    <nav class="page-navigation">
+      <h2 class="visually-hidden">Навигация по сайту</h2>
+      <ul class="site-navigation">
+        <li class="site-navigation-categories"><a>Каталог товаров</a>
+          <div class="site-navigation-items">
+
+         <ul class="view">
+            <li><a href="catalog.html">Виртуальная реальность</a></li>
+            <li><a href="catalog.html">Моноподы для селфи</a></li>
+            <li><a href="catalog.html">Экшн-камеры</a></li>
+          </ul>
+          <ul class="fitness">
+            <li><a href="catalog.html">Фитнес-браслеты</a></li>
+            <li><a href="catalog.html">Умные часы</a></li>
+          </ul>
+          <ul class="quadrocopter">
+            <li><a href="catalog.html">Квадракоптеры</a></li>
+          </ul>
+             </div>
+        </li>
+        <li class="site-navigation-delivery"><a href="#">Доставка</a></li>
+        <li class="site-navigation-guarantee
+"><a href="#">Гарантия</a></li>
+        <li class="site-navigation-contacts"><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
+
+
+ </div>
   </header>
 
-  <main class="container">
+  <main class="page-main">
     <h1 class="visually-hidden">Каталог товаров</h1>
 
+    <div class="container">
+      <div class="site-map">
     <h2 class="monopods">Моноподы для селфи</h2>
 
     <ul class="breadcrumbs">
@@ -66,7 +77,26 @@
       <li><a href="catalog.html">Каталог товара</a></li>
       <li class="breadcrumbs-current"><a>Моноподы для селфи</a></li>
     </ul>
+    </div>
 
+
+
+
+      <section class="sorting">
+      <h3>Сортировка</h3>
+      <ul class="sorting-type">
+        <li class="sorting-price"><a>По цене</a></li>
+        <li class="sorting-type"><a href="#">По типу</a></li>
+        <li class="sorting-popular"><a href="#">По популярности</a></li>
+      </ul>
+      <ul class="sorting-direction">
+        <li><a href="#">По возрастанию</a></li>
+        <li><a href="#">По убыванию</a></li>
+      </ul>
+
+    </section>
+
+    <div class="catalog-columns">
     <section class="filter">
       <h3>Фильтр</h3>
         <form action="http://echo.htmlacademy.ru" method="post">
@@ -103,19 +133,9 @@
         </form>
     </section>
 
-    <section class="sorting">
-      <h3>Сортировка</h3>
-      <ul class="sorting-type">
-        <li class="sorting-price"><a>По цене</a></li>
-        <li class="sorting-type"><a href="#">По типу</a></li>
-        <li class="sorting-popular"><a href="#">По популярности</a></li>
-      </ul>
-      <ul class="sorting-direction">
-        <li><a href="#">По возрастанию</a></li>
-        <li><a href="#">По убыванию</a></li>
-      </ul>
 
-    </section>
+
+
 
     <section class="catalog">
       <h3 class="visually-hidden">Перечень товаров</h3>
@@ -155,6 +175,7 @@
 
       </div>
     </section>
+    </div>
 
     <ul class="pagination-list">
       <li class="pagination-item-back"><a href="#">Назад</a></li>
@@ -163,37 +184,20 @@
       <li class="pagination-item"><a href="#">3</a></li>
       <li class="pagination-item-next"><a href="#">Вперед</a></li>
     </ul>
+    </div>
 
   </main>
 
   <footer class="page-footer">
 
-    <a class="footer-logo" href="index.html">
-        <img src="img/logo-footer.png" alt="Логотип" width="167" height="54">
+    <div class="container">
+
+      <div class="footer-top">
+    <a href="index.html">
+        <img src="img/logo-footer.png" alt="Логотип" width="164" height="36">
       </a>
 
-    <p>г. Москва, ул. Строителей, 15</p>
-
-    <section class="footer-social">
-      <h2 class="visually-hidden">Социальные кнопки</h2>
-      <ul>
-        <li><a class="social-button" href="#">Фейсбук</a></li>
-        <li><a class="social-button" href="#">Инстаграм</a></li>
-        <li><a class="social-button" href="#">Твитер</a></li>
-      </ul>
-    </section>
-
-    <section class="footer-service">
-      <h2 class="visually-hidden">Навигация по сайту</h2>
-      <ul>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-    </section>
-
-
-    <section class="footer-user-menu">
+        <section class="footer-user-menu">
       <h2 class="visually-hidden">Меню пользователя</h2>
       <ul>
         <li class="user-login"><a href="#">Валентин Петухов</a></li>
@@ -203,12 +207,40 @@
       </ul>
     </section>
 
+        </div>
 
-    <p>Тел.: +7 (495) 495-95-95</p>
+      <div class="footer-middle">
+    <p>г. Москва, ул. Строителей, 15</p>
+
+            <section class="footer-service">
+      <h2 class="visually-hidden">Навигация по сайту</h2>
+      <ul class="footer-service-categories">
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Гарантия</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </section>
+
+            <p>Тел.: +7 (495) 495-95-95</p>
+
+      </div>
+
+      <div class="footer-bottom">
+    <section class="footer-social">
+      <h2 class="visually-hidden">Мы в соц.сетях</h2>
+      <ul>
+        <li><a class="social-button" href="#">Фейсбук</a></li>
+        <li><a class="social-button" href="#">Инстаграм</a></li>
+        <li><a class="social-button" href="#">Твитер</a></li>
+      </ul>
+    </section>
+
+
     <div class="copyrighted">
       <a class="logo-html-academy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
     </div>
-
+      </div>
+    </div>
   </footer>
   <script></script>
 </body>
