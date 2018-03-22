@@ -1,36 +1,13 @@
 /* ОТОБРАЖЕНИЕ БЛОКОВ */
 
-* {
-  outline: 1px dotted red;
-}
-
-* * {
-  outline: 1px dotted green;
-}
-
-* * * {
-  outline: 1px dotted orange;
-}
-
-* * * * {
-  outline: 1px dotted blue;
-}
-
-* * * * * {
-  outline: 1px dotted red;
-}
-
-* * * * * * {
-  outline: 1px dotted green;
-}
-
-* * * * * * * {
-  outline: 1px dotted orange;
-}
-
-* * * * * * * * {
-  outline: 1px dotted blue;
-}
+* {outline: 1px dotted red;}
+* * {outline: 1px dotted green;}
+* * * {outline: 1px dotted orange;}
+* * * * {outline: 1px dotted blue;}
+* * * * * {outline: 1px dotted red;}
+* * * * * * {outline: 1px dotted green;}
+* * * * * * * {outline: 1px dotted orange;}
+* * * * * * * * {outline: 1px dotted blue;}
 
 @font-face {
   font-family: "Gilroy";
@@ -68,10 +45,12 @@
 body {
   margin: 0;
   padding: 0;
+  
   font-family: "Gilroy", "Helvetica", sans-serif;
   font-size: 15px;
   line-height: 30px;
   color: #464646;
+  
   background-color: #ffffff;
 }
 
@@ -80,14 +59,12 @@ a {
 }
 
 /*Глобальная настройка изображений*/
-
 img {
   max-width: 100%;
   height: auto;
 }
 
 /*Скрываем то, что не отражается в макете*/
-
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -107,93 +84,109 @@ input[type="radio"].visually-hidden {
 }
 
 /*Задает размеры и положение центровщика*/
-
 .container {
   width: 1160px;
   margin: 0 auto;
   padding: 0 20px;
-
 }
 
 /*Задает размеры и положение шапки сайта*/
-
 .page-header {
   min-height: 188px;
   margin-top: 40px;
   padding: 0 60px;
+  
   background-color: #f7e296;
 }
 
 /*Задает размеры и положение логотипа*/
-
 .header-logo {
-  margin-top: -18px;
   width: 164px;
   height: 36px;
-  margin-bottom: 12px;
+  margin-top: -18px;
+  margin-bottom: 7px;
+  
+  cursor: pointer;
 }
 
 /*Задает прозрачность логотипу при наведении*/
-
 .header-logo:hover {
   opacity: 0.6;
 }
 
 /*Задает прозрачность логотипу при нажатии*/
-
 .header-logo:active {
   opacity: 0.3;
 }
 
 /*Содержит кнопку поиска и меню пользователя*/
-
 .header-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 35px;
+  margin-bottom: 28px;
+}
 
+/*Делает форму флексом*/
+.site-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  width: 440px;
+}
+
+/*Добавляет картинку поиска*/
+.site-search::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 16px;
+  left: 3px;
+  
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
 }
 
 /*Задает стили полю ввода в спокойном состоянии*/
-
 input[type="search"] {
-  width: 355px;
-  margin-right: 95px;
+  position: relative;
+  width: 300px;
+  margin-right: auto;
+  min-height: 48px;
+  padding-left: 38px;
+  
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 30px;
-  letter-spacing: 0.01em;
   color: #000000;
+  letter-spacing: 0.01em;
+
+  background-color: transparent;
+  border: none; 
+  
   opacity: 0.3;
-  background-color: #f7e296;
-  border: none;
-
 }
-
-/*Задает стили полю ввода при наведении*/
 
 input[type="search"]:hover {
-  color: #000000;
+  color: #000000; 
+  
   opacity: 0.6;
-  background-color: #f7e296;
-  border: none;
 }
-
-/*Задает стили полю ввода при нажатии*/
 
 input[type="search"]:focus {
   color: #000000;
-  background-color: #f7e296;
-  border: none;
-  border-bottom: 2px solid #000000;
-
+  
+  opacity: 1;
 }
 
-/*Задает стили кнопке поиска в спокойном состоянии. Нужно скрыть*/
-
-.search-button {
-  width: 85px;
+/*Задает стили кнопке поиска в спокойном состоянии*/
+.site-search-button {
+  display: none;
+  width: 80px;
+  min-height: 48px;
 
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-weight: 300;
@@ -201,45 +194,86 @@ input[type="search"]:focus {
   line-height: 30px;
   letter-spacing: 0.01em;
   color: #000000;
+  
   background-color: #f7e296;
-  border: 2px solid transparent;
+  border: 2px solid #000000;
+}
+
+/*Задает линию в форме поиска при нажатии на поле*/
+.site-search-button::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  
+  display: block;
+  width: 439px;
+  height: 3px;
+  
+  background-color: #000000;
+  
+  opacity: 1;
+}
+
+input[type="search"]:focus ~ .site-search-button {
+  display: block;
+}
+
+
+/*Задает стили кнопке поиска в нажатом состоянии*/
+.site-search-button:focus {
+  position: relative;
+  width: 80px;
+  height: 49px;
+  margin: 0;
+  padding: 0;
+  
+  color: #ffffff;
+  background-color: #000000;
+  border: 2px solid #000000;
+  overflow: visible;
 }
 
 /*Задает стили кнопке поиска при наведении*/
-
-.search-button:hover {
+.site-search-button:hover {
   color: #ffffff;
   background-color: #000000;
+  cursor: pointer;
 }
 
-/*Задает стили кнопке поиска при нажатии*/
-
-.search-button:active {
+.site-search-button:active {
+  display: block;
+  
   color: rgba(255, 255, 255, 0.3);
-  background-color: #000000;
+  
 }
+
+.site-search-button:active::after {
+  bottom: -2px;
+}
+
 
 /*Убирает отступы у списка меню пользователя, делает блок - флексом*/
-
 .user-menu {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 520px;
   margin: 0;
   padding: 0;
 }
 
 /*Убирает отступы у элементов меню пользователя, задает им размеры*/
-
 .user-menu li {
   margin: 0;
   padding: 0;
-  width: 100px;
   list-style: none;
-
 }
 
 /*Задает стили ссылкам в меню пользователя*/
-
 .user-menu a {
+  position: relative;
+  display: block;
+
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-weight: 300;
   letter-spacing: 0.01em;
@@ -247,34 +281,85 @@ input[type="search"]:focus {
 }
 
 /*Задает прозрачность ссылкам при наведении в меню пользователя*/
-
 .user-menu a:hover {
-  color: rgba(0, 0, 0, 0.6);
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 /*Задает прозрачность ссылкам при нажатии в меню пользователя*/
-
 .user-menu a:active {
-  color: rgba(0, 0, 0, 0.3);
+  opacity: 0.3;
+  cursor: pointer;
 }
 
-/*Обнуляет отступы и стили в навигации по сайту*/
+/*Задает размеры пункту меню*/
+.login-link {
+  margin-right: 195px;
+    padding: 8px 0 9px 42px;
+}
 
+.user-menu .login-link:before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 16px;
+  width: 14px;
+  height: 14px;
+  
+  background-image: url("../img/user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+/*Задает размеры пункту меню*/
+.compare {
+  margin-right: 20px;
+  padding: 8px 0 9px 42px
+}
+
+.user-menu .compare:before {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 23px;
+  width: 14px;
+  height: 14px;
+  
+  background-image: url("../img/compare.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+/*Задает размеры пункту меню*/
+.basket {
+  margin-right: 0;
+  padding: 8px 0 9px 44px;
+}
+
+.user-menu .basket:before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 21px;
+  width: 14px;
+  height: 14px;
+  
+  background-image: url("../img/cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+
+/*Обнуляет отступы и стили в навигации по сайту. Делает навигацию флексом*/
 .site-navigation {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/*Делает навигацию флексом*/
-
-.site-navigation {
-  display: flex;
-  justify-content: space-between;
-}
-
 /*Оформляет ссылки в навигации*/
-
 .site-navigation a {
   text-transform: uppercase;
   font-weight: 800;
@@ -284,52 +369,109 @@ input[type="search"]:focus {
   color: #000000;
 }
 
-/*Добавляет прозрачность ссылкам в навигации при наведении*/
 
+/*Добавляет прозрачность ссылкам в навигации при наведении*/
 .site-navigation a:hover {
-  color: rgba(0, 0, 0, 0.6);
+  opacity: 0.6;
 }
 
 /*Добавляет прозрачность ссылкам в навигации при нажатии*/
-
 .site-navigation a:active {
-  color: rgba(0, 0, 0, 0.3);
+  opacity: 0.3;
+}
+
+.site-navigation-guarantee {
+  margin-left: 34px;
+}
+
+.site-navigation-contacts {
+  margin-right: -3px;
+  margin-left: 108px;
 }
 
 /*Родитель выпадающего списка*/
-
 .site-navigation-categories {
   position: relative;
+  margin-right: auto;
+  margin-left: -1px;
+  padding-right: 55px;
+}
+
+.site-navigation-categories::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  
+  width: 17px;
+  height: 17px;
+  
+  background-image: url("../img/plus.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  
+  opacity: 0.3;
+}
+
+.site-navigation-items ul,
+.site-navigation-items li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /*Выпадающий список товаров*/
-
 .site-navigation-items {
   display: none;
   position: absolute;
-  left: 0px;
-  width: 1160px;
-  min-height: 160px;
+  left: -60px;
+  width: 1100px;
+  min-height: 157px;
+  padding-left: 60px;
+  
   background: #f7e296;
 }
 
 /*Отражает выпадающий список товаров при наведении на родителя*/
 
-.site-navigation-catalog:hover .site-navigation-items {
+.site-navigation > li:hover .site-navigation-items {
+  display: block;
+}
+
+
+.site-navigation-items-container {
   display: flex;
+  flex-wrap: wrap;
+  width: 1080px;
+  margin-top: 16px;
 }
 
 /*Оформляет ссылки в выпадающем списке*/
-
-.view a,
-.fitness a,
-.quadrocopter a {
-  text-transform: none;
+.site-navigation-items-container a,
+.site-navigation-items-container a,
+.site-navigation-items-container a {
+  width: 200px;
+  min-height: 30px;
+  
+  font-family: "Open Sans", "Helvetica", sans-serif;
   font-weight: 300;
   font-size: 15px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  
+  cursor: pointer;
 }
 
 /*Оформляет ссылки в выпадающем списке при наведении*/
+
+.site-navigation-items-container .view {
+  margin-right: 60px;
+}
+
+.site-navigation-items-container .fitness {
+  margin-right: 75px;
+}
 
 .view a:hover,
 .fitness a:hover,
