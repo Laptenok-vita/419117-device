@@ -361,6 +361,7 @@ input[type="search"]:focus ~ .site-search-button {
 
 /*Оформляет ссылки в навигации*/
 .site-navigation a {
+  padding: 4px 0;
   text-transform: uppercase;
   font-weight: 800;
   font-size: 18px;
@@ -430,6 +431,8 @@ input[type="search"]:focus ~ .site-search-button {
   padding-left: 60px;
   
   background: #f7e296;
+  
+  z-index: 10;
 }
 
 /*Отражает выпадающий список товаров при наведении на родителя*/
@@ -450,8 +453,7 @@ input[type="search"]:focus ~ .site-search-button {
 .site-navigation-items-container a,
 .site-navigation-items-container a,
 .site-navigation-items-container a {
-  width: 200px;
-  min-height: 30px;
+  padding: 8px 0;
   
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-weight: 300;
@@ -487,27 +489,86 @@ input[type="search"]:focus ~ .site-search-button {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.popular {}
+.popular {
+ position: relative;
+}
+
+.popular:before {
+  content: "";
+  position: absolute;
+  width: 1160px;
+  height: 112px;
+  
+  top: 0;
+  left: 0; 
+  
+  background-color: #f7e296;
+  z-index: -10;
+}
 
 .popular-items {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  
+
   margin-bottom: 105px;
-  padding: 0 20px;
+  padding: 0 60px;
 }
 
-.photo {}
+.popular-items > div {
+  width: 580px;
+}
+
+.photo {
+  margin-left: 30px;
+  margin-right: 10px;
+}
 
 .description {
+  position: relative;
   margin-top: 80px;
+  
+  display: flex;
+  flex-direction: column;
 }
 
+.description:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 8px;
+  top: -42px;
+  left: 0;
+  
+  z-index: -5;
+  
+  background-color: #ffffff;
+}
 
 .description p {
+  padding-top: 4px;
+  
+  position: relative;
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-weight: 300;
   letter-spacing: 0.01em;
 }
+
+.description .item-1:before {
+  content: "01";
+  position: absolute;
+  width: 167px;
+  height: 129px;
+  top: -93px;
+  left: 329px;
+  
+  font-weight: 800;
+  font-size: 179px;
+  line-height: 179px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  }
 
 .description b {
   font-weight: 800;
@@ -517,13 +578,65 @@ input[type="search"]:focus ~ .site-search-button {
   color: #000000;
 }
 
-.btn-more {
+.description table {
+  margin-bottom: 0;
+    margin-left: -3px;
+}
+
+.description td {
+  width: 140px;
+}
+
+.description td:first-child {
+  width: 156px;
+}
+
+.description td:nth-child(2) {
+  width: 135px;
+}
+
+.description th {
+  padding: 4px 0;
+  text-align: left;
+}
+
+.description .btn-more {
+  display: block;
+  position: relative;
+  width: 134px;
+  margin-top: 28px;
+  margin-bottom: 47px;
+  padding: 8px 43px;
+  
   color: #000000;
   text-transform: uppercase;
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.2em;
+  
+  cursor: pointer;
+}
+
+.description .btn-more::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 0;
+  
+  z-index: -1;
+  width: 220px;
+  height: 8px;
+  
+  background-color: #f0c52e;
+}
+
+.description .btn-more:hover::after{
+  height: 40px;
+  top: 0;
+  margin: 0;
+  transition: all 0.3s linear;
+  
 }
 
 .btn-more:active {
