@@ -16,23 +16,23 @@
       <a>
         <img class="header-logo" src="img/logo-header.png" alt="Логотип" width="164" height="36">
       </a>
-      
+
       <div class="header-container">
-        
+
         <form class="site-search" action="http://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="search-field">Поиск по сайту</label>
           <input type="search" name="search" id="search-field" value="" placeholder="Поиск по сайту">
           <button class="site-search-button" type="submit">Найти</button>
-          
+
         </form>
-        
+
         <section class="user-menu">
           <h2 class="visually-hidden">Меню пользователя</h2>
           <ul class="user-menu">
             <li>
               <a class="login-link" href="#">Войти</a>
             </li>
-            <li >
+            <li>
               <a class="compare" href="#">Сравнить</a>
             </li>
             <li>
@@ -40,43 +40,43 @@
             </li>
           </ul>
         </section>
-        
+
       </div>
-      
+
       <nav class="page-navigation">
         <h2 class="visually-hidden">Навигация по сайту</h2>
         <ul class="site-navigation">
           <li class="site-navigation-categories">
             <a href="catalog.html">Каталог товаров</a>
-            
+
             <div class="site-navigation-items">
-              
+
               <div class="site-navigation-items-container">
-              <ul class="view">
-                <li>
-                  <a href="catalog.html">Виртуальная реальность</a>
-                </li>
-                <li>
-                  <a href="catalog.html">Моноподы для селфи</a>
-                </li>
-                <li>
-                  <a href="catalog.html">Экшн-камеры</a>
-                </li>
-              </ul>
-              <ul class="fitness">
-                <li>
-                  <a href="catalog.html">Фитнес-браслеты</a>
-                </li>
-                <li>
-                  <a href="catalog.html">Умные часы</a>
-                </li>
-              </ul>
-              <ul class="quadrocopter">
-                <li>
-                  <a href="catalog.html">Квадракоптеры</a>
-                </li>
-              </ul>
-            </div>
+                <ul class="view">
+                  <li>
+                    <a href="catalog.html">Виртуальная реальность</a>
+                  </li>
+                  <li>
+                    <a href="catalog.html">Моноподы для селфи</a>
+                  </li>
+                  <li>
+                    <a href="catalog.html">Экшн-камеры</a>
+                  </li>
+                </ul>
+                <ul class="fitness">
+                  <li>
+                    <a href="catalog.html">Фитнес-браслеты</a>
+                  </li>
+                  <li>
+                    <a href="catalog.html">Умные часы</a>
+                  </li>
+                </ul>
+                <ul class="quadrocopter">
+                  <li>
+                    <a href="catalog.html">Квадракоптеры</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </li>
           <li class="site-navigation-delivery">
@@ -97,10 +97,15 @@
     <h1 class="visually-hidden">Магазин электронных гаджетов "Девайс"</h1>
 
     <div class="container">
-      
+
       <section class="popular">
         <h2 class="visually-hidden">Популярные товары</h2>
+
         <div class="popular-items">
+
+<!--
+          <div class="slider slider-1">
+            
           <div class="photo">
             <img src="img/slider-1.png" alt="Палка для селфи" width="384" height="486">
           </div>
@@ -110,7 +115,7 @@
             <p>Самая длинная палка для селфи доступна в нашем магазине.
               <br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
             <a class="btn-more" href="#">Подробнее</a>
-            <table>
+            <table class="table-1">
               <tr>
                 <td>8,5 м</td>
                 <td>5 кг</td>
@@ -123,9 +128,16 @@
               </tr>
             </table>
           </div>
-        </div>
-        <div class="popular-items">
-          <img src="img/slider-2.png" alt="Фитнес часы" width="345" height="485">
+            
+          </div>
+-->
+
+<!--
+          <div class="slider slider-2">
+          <div class="photo">
+            <img src="img/slider-2.png" alt="Фитнес часы" width="345" height="485">
+          </div>
+
           <div class="description">
             <b class="item-2">Худеем
               <br> правильно!
@@ -133,7 +145,7 @@
             <p>Мотивирующие фитнес-браслеты помогут найти в себе силы
               <br> не пропускать занятия и соблюдать диету.</p>
             <a class="btn-more" href="#">Подробнее</a>
-            <table class="fitness-watch">
+            <table class="table-2">
               <tr>
                 <td>48 часов</td>
               </tr>
@@ -142,16 +154,21 @@
               </tr>
             </table>
           </div>
-        </div>
-        <div class="popular-items">
-          <img src="img/slider-3.png" alt="Квадракоптер" width="526" height="334">
+          </div>
+-->
+          
+          <div class="slider slider-3">
+          <div class="photo">
+            <img src="img/slider-3.png" alt="Квадракоптер" width="526" height="334">
+          </div>
+
           <div class="description">
             <b class="item-3">Порхает как бабочка,
               <br> жалит как пчела!</b>
             <p>Этот обычный, на первый взгляд, квадрокоптер оснащен
               <br> мощным лазером, замаскированным под стандартную камеру.</p>
             <a class="btn-more" href="#">Подробнее</a>
-            <table class="quadrupter">
+            <table class="table-3">
               <tr>
                 <td>800 м</td>
                 <td>50 м</td>
@@ -162,7 +179,10 @@
               </tr>
             </table>
           </div>
+          </div>
+          
         </div>
+
       </section>
     </div>
 
