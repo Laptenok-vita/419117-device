@@ -103,36 +103,35 @@
 
         <div class="popular-items">
 
-<!--
           <div class="slider slider-1">
-            
-          <div class="photo">
-            <img src="img/slider-1.png" alt="Палка для селфи" width="384" height="486">
-          </div>
-          <div class="description">
-            <b class="item-1">Делай селфи,
-              <br> как Бен Стиллер!</b>
-            <p>Самая длинная палка для селфи доступна в нашем магазине.
-              <br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-            <a class="btn-more" href="#">Подробнее</a>
-            <table class="table-1">
-              <tr>
-                <td>8,5 м</td>
-                <td>5 кг</td>
-                <td>Карбон</td>
-              </tr>
-              <tr>
-                <th>Длина палки</th>
-                <th>Вес палки</th>
-                <th>Материал</th>
-              </tr>
-            </table>
-          </div>
-            
-          </div>
--->
 
-<!--
+            <div class="photo">
+              <img src="img/slider-1.png" alt="Палка для селфи" width="384" height="486">
+            </div>
+            <div class="description">
+              <b class="item-1">Делай селфи,
+              <br> как Бен Стиллер!</b>
+              <p>Самая длинная палка для селфи доступна в нашем магазине.
+                <br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+              <a class="btn-more" href="#">Подробнее</a>
+              <table class="table-1">
+                <tr>
+                  <td>8,5 м</td>
+                  <td>5 кг</td>
+                  <td>Карбон</td>
+                </tr>
+                <tr>
+                  <th>Длина палки</th>
+                  <th>Вес палки</th>
+                  <th>Материал</th>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+
+          <!--
+
           <div class="slider slider-2">
           <div class="photo">
             <img src="img/slider-2.png" alt="Фитнес часы" width="345" height="485">
@@ -155,7 +154,9 @@
             </table>
           </div>
           </div>
+          
 -->
+          <!--
           
           <div class="slider slider-3">
           <div class="photo">
@@ -181,6 +182,8 @@
           </div>
           </div>
           
+-->
+        
         </div>
 
       </section>
@@ -188,61 +191,84 @@
 
     <div class="container">
       <section class="categories-goods">
+
         <h2 class="visually-hidden">Категории товаров</h2>
         <ul class="categories">
           <li>
-            <a href="catalog.html">Виртуальная реальность</a>
+            <a class="categories-items item-1" href="catalog.html">Виртуальная реальность</a>
           </li>
           <li>
-            <a href="catalog.html">Моноподы для селфи</a>
+            <a class="categories-items item-2" href="catalog.html"><span class="item-2-wrapper">Моноподы для селфи</span></a>
           </li>
           <li>
-            <a href="catalog.html">Экшн-камеры</a>
+            <a class="categories-items item-3" href="catalog.html">Экшн-камеры</a>
           </li>
           <li>
-            <a href="catalog.html">Фитнес-браслеты</a>
+            <a class="categories-items item-4" href="catalog.html">Фитнес-браслеты</a>
           </li>
           <li>
-            <a href="catalog.html">Умные часы</a>
+            <a class="categories-items item-5" href="catalog.html">Умные часы</a>
           </li>
           <li>
-            <a href="catalog.html">Квадракоптеры</a>
+            <a class="categories-items item-6" href="catalog.html">Квадракоптеры</a>
           </li>
         </ul>
+
       </section>
     </div>
 
+
+
+
     <div class="service-wrapper">
-      <div class="container">
-        <section class="service">
-          <h2 class="visually-hidden">Услуги</h2>
-          <ul class="service-controls">
-            <li>Доставка</li>
-            <li>Гарантия</li>
-            <li>Кредит</li>
-          </ul>
-          <div class="service-content">
-            <div class="delivery">
-              <h2>Доставка</h2>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему
-                <br> подъезду совершенно бесплатно! Ведь мы неплохо
-                <br> заработаем, поднимая его на ваш этаж.</p>
-            </div>
+
+      <section class="service">
+        <h2 class="visually-hidden">Услуги</h2>
+
+        <input class="visually-hidden" type="radio" id="service-delivery" name="service" value="delivery">
+        <input class="visually-hidden" type="radio" id="service-guarantee" name="service" value="guarantee">
+        <input class="visually-hidden" type="radio" id="service-credit" name="service" value="credit">
+        
+        <div class="service-controls">
+
+          <label class="service-controls-items item-1" for="service-delivery">Доставка</label>
+
+          <label class="service-controls-items item-2" for="service-delivery">Гарантия</label>
+
+          <label class="service-controls-items item-3" for="service-delivery">Кредит</label>
+
+        </div>
+
+        <div class="service-content">
+
+          <div class="delivery">
+
+            <h2>Доставка</h2>
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему
+              <br> подъезду совершенно бесплатно! Ведь мы неплохо
+              <br> заработаем, поднимая его на ваш этаж.</p>
+          </div>
+          <!--
+            
             <div class="guarantee">
               <h2>Гарантия</h2>
               <p>Если из-за возгорания купленного у нас товара у вас сгорит
                 <br> дом — не переживайте, мы выдадим вам новый.
                 <br> Товар, не дом, конечно же.</p>
+              
             </div>
+            
             <div class="credit">
               <h2>Кредит</h2>
               <p>Залезть в долговую яму стало проще! Кредитные
                 <br> консультанты подберут для вас наиболее выгодные
                 <br> условия кредита. Выгодные для нашего банка, разумеется.</p>
             </div>
-          </div>
-        </section>
-      </div>
+            
+-->
+        </div>
+
+      </section>
     </div>
 
     <div class="container">
