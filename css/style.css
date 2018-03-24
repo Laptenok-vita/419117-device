@@ -1020,6 +1020,19 @@ input[type="search"]:focus ~ .site-search-button {
   background-image: url("../img/credit.svg");
 }
 
+.delivery,
+.guarantee,
+.credit {
+  display: none;
+}
+
+#service-1:checked~.delivery,
+#service-2:checked~.guarantee,
+#service-3:checked~.credit {
+  display: block;
+}
+
+
 .logotypes-items {
   display: flex;
   justify-content: space-around;
