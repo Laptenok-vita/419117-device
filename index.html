@@ -399,34 +399,44 @@
 
   
     <div class="container">
-      <section class="modal modal-map">
+      <section class="modal-map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
         <div>
           <img src="img//map-big.png" width="960" height="559" alt="Магазин расположен по адресу г. Москва, ул. Строителей, 15">
-        </div>
-        <button class="modal-map-close" type="button">Закрыть</button>
+        </div>                
+        <button class="modal-map-close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        
       </section>
     </div>
 
-    <div class="container">
-      <section class="modal modal-feedback">
+
+      <section class="modal-feedback">
+        
         <h2 class="visually-hidden">Форма обратной связи</h2>
+        
         <form class="feedback-form" action="http://echo.htmlacademy.ru" method="post">
-          <label for="feedback-user-name">Ваше имя:</label>
-          <label for="feedback-email">Ваш e-mail:</label>
-          <br>
-          <input type="text" name="user-name" id="feedback-user-name" value="" placeholder="Имя Фамилия">
+          <label class="feedback-user-name" for="feedback-user-name">Ваше имя:</label>
+          
+          <label class="feedback-email" for="feedback-email">Ваш e-mail:</label>
+          
+          <input type="text" name="user-name" id="feedback-user-name" value="" placeholder="Имя Фамилия" pattern="[А-я]{1-20} [А-я]{1-40}">
+          
           <input type="email" name="email" id="feedback-email" value="" placeholder="email@example.com">
-          <br>
-          <label for="feedback-field">Текст письма:</label>
-          <br>
+          
+          <label class="feedback-field" for="feedback-field">Текст письма:</label>
+          
           <textarea name="feedback-field" id="feedback-field" rows="10" placeholder="В свободной форме"></textarea>
-          <br>
-          <input type="submit" value="Отправить">
+
+          <button class="btn-modal-feedback" type="submit" value="Отправить"></button>
         </form>
-        <button class="modal-feedback-close" type="button">Закрыть</button>
+        
+        <button class="modal-feedback-close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
       </section>
-    </div>
+
   
   <script></script>
 </body>
