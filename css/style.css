@@ -554,9 +554,12 @@ input[type="search"]:focus ~ .site-search-button {
   -ms-flex-pack: justify;
 }
 
-.slider-monopod,
-.slider-quadrocopter {
+.slider-monopod {
   margin-bottom: 106px;
+}
+
+.slider-quadrocopter {
+  margin-bottom: 110px;
 }
 
 .slider-fitness-watch {
@@ -606,7 +609,7 @@ input[type="search"]:focus ~ .site-search-button {
 }
 
 .slider-quadrocopter img {
-  margin-top: -25px;
+  margin-top: -19px;
   margin-left: -31px;
 }
 
@@ -695,18 +698,8 @@ input[type="search"]:focus ~ .site-search-button {
   letter-spacing: 0.01em;
 }
 
-.description .table-1 {
-  margin-top: auto;
-  margin-left: -4px;
-}
-
-.description .table-2 {
-  margin-top: 48px;
-  margin-left: -4px;
-}
-
-.description .table-3 {
-  margin-top: 48px;
+.description table {
+  margin-top: 47px;
   margin-left: -4px;
 }
 
@@ -728,7 +721,7 @@ input[type="search"]:focus ~ .site-search-button {
 }
 
 .description th {
-  padding: 5px 0;
+  padding: 2px 0;
   padding-left: 2px;
 
   font-weight: 300;
@@ -923,7 +916,7 @@ input[type="search"]:focus ~ .site-search-button {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  margin-bottom: 80px;
+  margin-bottom: 81px;
   padding: 0;
 
   list-style: none;
