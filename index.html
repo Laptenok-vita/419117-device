@@ -54,26 +54,26 @@
               <div class="site-navigation-items-container">
                 <ul class="view">
                   <li>
-                    <a href="catalog.html">Виртуальная реальность</a>
+                    <a href="catalog.html/..">Виртуальная реальность</a>
                   </li>
                   <li>
-                    <a href="catalog.html">Моноподы для селфи</a>
+                    <a href="catalog.html/..">Моноподы для селфи</a>
                   </li>
                   <li>
-                    <a href="catalog.html">Экшн-камеры</a>
+                    <a href="catalog.html/..">Экшн-камеры</a>
                   </li>
                 </ul>
                 <ul class="fitness">
                   <li>
-                    <a href="catalog.html">Фитнес-браслеты</a>
+                    <a href="catalog.html/..">Фитнес-браслеты</a>
                   </li>
                   <li>
-                    <a href="catalog.html">Умные часы</a>
+                    <a href="catalog.html/..">Умные часы</a>
                   </li>
                 </ul>
                 <ul class="quadrocopter">
                   <li>
-                    <a href="catalog.html">Квадракоптеры</a>
+                    <a href="catalog.html/..">Квадракоптеры</a>
                   </li>
                 </ul>
               </div>
@@ -101,38 +101,43 @@
       <section class="popular">
         <h2 class="visually-hidden">Популярные товары</h2>
 
-        <div class="popular-items">
+        <input class="visually-hidden" type="radio" id="popular-1" name="toggle" value="monopod" checked>
+        <input class="visually-hidden" type="radio" id="popular-2" name="toggle" value="fitness-watch">
+        <input class="visually-hidden" type="radio" id="popular-3" name="toggle" value="quadrocopter">
 
-          <div class="slider slider-1">
+        <label class="monopod" for="popular-1"></label>
+        <label class="fitness-watch" for="popular-2"></label>
+        <label class="quadrocopter" for="popular-3"></label>
 
-            <div class="photo">
-              <img src="img/slider-1.png" alt="Палка для селфи" width="384" height="486">
-            </div>
-            <div class="description">
-              <b class="item-1">Делай селфи,
+        <div class="slider slider-monopod">
+
+          <div class="photo">
+            <img src="img/slider-1.png" alt="Палка для селфи" width="384" height="486">
+          </div>
+          <div class="description">
+            <b class="item-1">Делай селфи,
               <br> как Бен Стиллер!</b>
-              <p>Самая длинная палка для селфи доступна в нашем магазине.
-                <br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-              <a class="btn-more" href="#">Подробнее</a>
-              <table class="table-1">
-                <tr>
-                  <td>8,5 м</td>
-                  <td>5 кг</td>
-                  <td>Карбон</td>
-                </tr>
-                <tr>
-                  <th>Длина палки</th>
-                  <th>Вес палки</th>
-                  <th>Материал</th>
-                </tr>
-              </table>
-            </div>
-
+            <p>Самая длинная палка для селфи доступна в нашем магазине.
+              <br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+            <a class="btn-more" href="#">Подробнее</a>
+            <table class="table-1">
+              <tr>
+                <td>8,5 м</td>
+                <td>5 кг</td>
+                <td>Карбон</td>
+              </tr>
+              <tr>
+                <th>Длина палки</th>
+                <th>Вес палки</th>
+                <th>Материал</th>
+              </tr>
+            </table>
           </div>
 
-          <!--
+        </div>
 
-          <div class="slider slider-2">
+
+        <div class="slider slider-fitness-watch">
           <div class="photo">
             <img src="img/slider-2.png" alt="Фитнес часы" width="345" height="485">
           </div>
@@ -153,12 +158,10 @@
               </tr>
             </table>
           </div>
-          </div>
-          
--->
-          <!--
-          
-          <div class="slider slider-3">
+        </div>
+
+
+        <div class="slider slider-quadrocopter">
           <div class="photo">
             <img src="img/slider-3.png" alt="Квадракоптер" width="526" height="334">
           </div>
@@ -180,10 +183,6 @@
               </tr>
             </table>
           </div>
-          </div>
-          
--->
-        
         </div>
 
       </section>
@@ -223,20 +222,20 @@
     <div class="service-wrapper">
 
       <div class="container">
-      <section class="service">
-        <h2 class="visually-hidden">Услуги</h2>
+        <section class="service">
+          <h2 class="visually-hidden">Услуги</h2>
 
-        <input class="visually-hidden" type="radio" id="service-1" name="service" value="delivery" checked>
-        <input class="visually-hidden" type="radio" id="service-2" name="service" value="guarantee">
-        <input class="visually-hidden" type="radio" id="service-3" name="service" value="credit">
-        
-        <div class="service-controls">
+          <input class="visually-hidden" type="radio" id="service-1" name="service" value="delivery" checked>
+          <input class="visually-hidden" type="radio" id="service-2" name="service" value="guarantee">
+          <input class="visually-hidden" type="radio" id="service-3" name="service" value="credit">
 
-          <label class="service-controls-items item-1" for="service-1">Доставка</label>
-          <label class="service-controls-items item-2" for="service-2">Гарантия</label>
-          <label class="service-controls-items item-3" for="service-3">Кредит</label>
+          <div class="service-controls">
 
-        </div>
+            <label class="service-controls-items item-1" for="service-1">Доставка</label>
+            <label class="service-controls-items item-2" for="service-2">Гарантия</label>
+            <label class="service-controls-items item-3" for="service-3">Кредит</label>
+
+          </div>
 
 
           <div class="service-content delivery">
@@ -246,26 +245,26 @@
               <br> подъезду совершенно бесплатно! Ведь мы неплохо
               <br> заработаем, поднимая его на ваш этаж.</p>
           </div>
-          
-            
-            <div class="service-content guarantee">
-              <h2>Гарантия</h2>
-              <p>Если из-за возгорания купленного у нас товара у вас сгорит
-                <br> дом — не переживайте, мы выдадим вам новый.
-                <br> Товар, не дом, конечно же.</p>
-              
-            </div>
-            
-            <div class="service-content credit">
-              <h2>Кредит</h2>
-              <p>Залезть в долговую яму стало проще! Кредитные
-                <br> консультанты подберут для вас наиболее выгодные
-                <br> условия кредита. Выгодные для нашего банка, разумеется.</p>
-            </div>
-      </section>
+
+
+          <div class="service-content guarantee">
+            <h2>Гарантия</h2>
+            <p>Если из-за возгорания купленного у нас товара у вас сгорит
+              <br> дом — не переживайте, мы выдадим вам новый.
+              <br> Товар, не дом, конечно же.</p>
+
+          </div>
+
+          <div class="service-content credit">
+            <h2>Кредит</h2>
+            <p>Залезть в долговую яму стало проще! Кредитные
+              <br> консультанты подберут для вас наиболее выгодные
+              <br> условия кредита. Выгодные для нашего банка, разумеется.</p>
+          </div>
+        </section>
+      </div>
     </div>
-    </div>
-    
+
     <div class="container">
       <section class="logotypes">
         <h2 class="visually-hidden">Логотипы</h2>
@@ -288,7 +287,7 @@
 
     <div class="container">
       <div class="index-columns">
-        
+
         <section class="info">
           <h2>О нас</h2>
           <p class="item-1">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
@@ -304,7 +303,9 @@
           <h2>Контакты</h2>
           <p class="item-1">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <div class="map">
-            <img src="img/map.png" alt="Карта" width="560" height="222">
+            <a>
+              <img src="img/map.png" alt="Карта" width="560" height="222">
+            </a>
           </div>
           <a class="btn-more" href="#">Напишите нам</a>
         </section>
@@ -314,21 +315,21 @@
   </main>
 
   <footer class="page-footer">
-    
+
     <div class="container">
-      
+
       <div class="footer-top">
-        
+
         <a>
-          <img class="footer-logo" img src="img/logo-footer.png" alt="Логотип" width="164" height="36">
+          <img class="footer-logo" src="img/logo-footer.png" alt="Логотип" width="164" height="36">
         </a>
-        
+
         <section class="footer-user-menu">
-          
+
           <h2 class="visually-hidden">Меню пользователя</h2>
-          
+
           <ul class="footer-user-menu-categories">
-            
+
             <li>
               <a class="login-link" href="#">Войти</a>
             </li>
@@ -340,16 +341,16 @@
             </li>
           </ul>
         </section>
-        
+
       </div>
       <div class="footer-middle">
-        
+
         <p>г. Москва, ул. Строителей, 15</p>
-        
+
         <section class="footer-service">
-          
+
           <h2 class="visually-hidden">Навигация по сайту</h2>
-          
+
           <ul class="footer-service-categories">
             <li>
               <a href="#">Доставка</a>
@@ -364,11 +365,11 @@
         </section>
         <p>Тел.: +7 (495) 495-95-95</p>
       </div>
-      
+
       <div class="footer-bottom">
-        
+
         <section class="footer-social">
-          
+
           <h2 class="visually-hidden">Мы в соц.сетях</h2>
           <ul class="footer-social-container">
             <li>
@@ -388,7 +389,7 @@
             </li>
           </ul>
         </section>
-        
+
         <div class="copyrighted">
           <a class="logo-html-academy" href="https://htmlacademy.ru/intensive/htmlcss">
             <span class="visually-hidden">HTML Academy</span>
@@ -398,48 +399,46 @@
     </div>
   </footer>
 
-  
-    <div class="container">
-      <section class="modal-map">
-        <h2 class="visually-hidden">Как до нас добраться</h2>
-        <div>
-          <img src="img//map-big.png" width="960" height="559" alt="Магазин расположен по адресу г. Москва, ул. Строителей, 15">
-        </div>                
-        <button class="modal-map-close" type="button">
+
+  <div class="container">
+    <section class="modal-map">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <div>
+        <img src="img//map-big.png" width="960" height="559" alt="Магазин расположен по адресу г. Москва, ул. Строителей, 15">
+      </div>
+      <button class="modal-map-close" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>
-        
-      </section>
-    </div>
+
+    </section>
+  </div>
 
 
-      <section class="modal-feedback">
-        
-        <h2 class="visually-hidden">Форма обратной связи</h2>
-        
-        <form class="feedback-form" action="http://echo.htmlacademy.ru" method="post">
-          <label class="feedback-user-name" for="feedback-user-name">Ваше имя:</label>
-          
-          <label class="feedback-email" for="feedback-email">Ваш e-mail:</label>
-          
-          <input type="text" name="user-name" id="feedback-user-name" value="" placeholder="Имя Фамилия" pattern="[А-я]{1-20} [А-я]{1-40}">
-          
-          <input type="email" name="email" id="feedback-email" value="" placeholder="email@example.com">
-          
-          <label class="feedback-field" for="feedback-field">Текст письма:</label>
-          
-          <textarea name="feedback-field" id="feedback-field" rows="10" placeholder="В свободной форме"></textarea>
+  <section class="modal-feedback">
 
-          <button class="btn-modal-feedback" type="submit" value="Отправить"></button>
-        </form>
-        
-        <button class="modal-feedback-close" type="button">
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+
+    <form class="feedback-form" action="http://echo.htmlacademy.ru" method="post">
+      <label class="feedback-user-name" for="feedback-user-name">Ваше имя:</label>
+
+      <label class="feedback-email" for="feedback-email">Ваш e-mail:</label>
+
+      <input type="text" name="user-name" id="feedback-user-name" value="" placeholder="Имя Фамилия" required>
+
+      <input type="email" name="email" id="feedback-email" value="" placeholder="email@example.com" required>
+
+      <label class="feedback-field" for="feedback-field">Текст письма:</label>
+
+      <textarea name="feedback-field" id="feedback-field" rows="10" placeholder="В свободной форме" required></textarea>
+
+      <button class="btn-modal-feedback" type="submit" value="Отправить"></button>
+    </form>
+
+    <button class="modal-feedback-close" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>
-      </section>
+  </section>
 
-  
-  <script></script>
 </body>
 
 </html>
