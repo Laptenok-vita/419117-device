@@ -993,7 +993,6 @@ input[type="search"]:focus ~ .site-search-button {
 
   width: 160px;
   height: 160px;
-
   background-color: #f7e296;
 }
 
@@ -1877,14 +1876,21 @@ input[type="search"]:focus ~ .site-search-button {
 }
 
 @-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
   70% {
     -webkit-transform: translateY(30px);
             transform: translateY(30px);
   }
+
   90% {
     -webkit-transform: translateY(-30px);
             transform: translateY(-30px);
   }
+
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -1892,14 +1898,21 @@ input[type="search"]:focus ~ .site-search-button {
 }
 
 @keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
   70% {
     -webkit-transform: translateY(30px);
             transform: translateY(30px);
   }
+
   90% {
     -webkit-transform: translateY(-30px);
             transform: translateY(-30px);
   }
+
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -1930,6 +1943,7 @@ input[type="search"]:focus ~ .site-search-button {
 }
 
 @-webkit-keyframes shake {
+  0%,
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -2228,7 +2242,7 @@ button.modal-feedback-close::after {
   height: 559px;
   margin-left: -480px;
 
-  background-image: url("../img//map-big.png");
+  background-image: url("../img/map-big.png");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -3391,7 +3405,6 @@ fieldset p {
   position: absolute;
   top: 14px;
   left: 22px;
-
   width: 14px;
   height: 14px;
 
