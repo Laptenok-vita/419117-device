@@ -1877,10 +1877,6 @@ input[type="search"]:focus ~ .site-search-button {
 }
 
 @-webkit-keyframes bounce {
-  0% {
-    -webkit-transform: translateY(-2000px);
-            transform: translateY(-2000px);
-  }
   70% {
     -webkit-transform: translateY(30px);
             transform: translateY(30px);
@@ -1896,10 +1892,6 @@ input[type="search"]:focus ~ .site-search-button {
 }
 
 @keyframes bounce {
-  0% {
-    -webkit-transform: translateY(-2000px);
-            transform: translateY(-2000px);
-  }
   70% {
     -webkit-transform: translateY(30px);
             transform: translateY(30px);
@@ -1938,7 +1930,6 @@ input[type="search"]:focus ~ .site-search-button {
 }
 
 @-webkit-keyframes shake {
-  0%,
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
