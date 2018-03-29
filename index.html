@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
   <title>HTML Academy: Девайс</title>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.min.css" rel="stylesheet">
@@ -43,7 +44,7 @@
             <a href="catalog.html">Каталог товаров</a>
             <div class="site-navigation-items">
               <div class="site-navigation-items-container">
-                <ul class="view">
+                <ul class="site-navigation-items-view">
                   <li>
                     <a href="catalog.html/..">Виртуальная реальность</a>
                   </li>
@@ -54,7 +55,7 @@
                     <a href="catalog.html/..">Экшн-камеры</a>
                   </li>
                 </ul>
-                <ul class="fitness">
+                <ul class="site-navigation-items-fitness">
                   <li>
                     <a href="catalog.html/..">Фитнес-браслеты</a>
                   </li>
@@ -62,7 +63,7 @@
                     <a href="catalog.html/..">Умные часы</a>
                   </li>
                 </ul>
-                <ul class="quadrocopter">
+                <ul class="site-navigation-items-quadrocopter">
                   <li>
                     <a href="catalog.html/..">Квадракоптеры</a>
                   </li>
@@ -337,8 +338,10 @@
   <div class="container">
     <section class="modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1.." width="960" height="559" frameborder="0" style="border:0" allowfullscreen></iframe>
-      <div>
+      <div class="iframe">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4245.794459612208!2d37.52592192478353!3d55.68670525441223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1522339010749" width="960" height="559" allowfullscreen></iframe>
+      </div>
+      <div class="map-image">
         <img src="img//map-big.png" width="960" height="559" alt="Магазин расположен по адресу г. Москва, ул. Строителей, 15">
       </div>
       <button class="modal-map-close" type="button">
@@ -362,8 +365,7 @@
         </button>
   </section>
 
-  <script src="js/feedback.min.js"></script>
-  <script src="js/map.min.js"></script>
+  <script src="js/modal.min.js"></script>
 
 </body>
 

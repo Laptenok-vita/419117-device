@@ -36,6 +36,7 @@
 
 
 body {
+  min-width: 1200px;
   margin: 0;
   padding: 0;
 
@@ -287,7 +288,7 @@ input[type="search"]:focus ~ .site-search-button {
   position: relative;
 
   margin-right: 195px;
-  padding: 8px 0px 9px 42px;
+  padding: 8px 0 9px 42px;
 }
 
 .user-menu .login-link:before {
@@ -308,7 +309,7 @@ input[type="search"]:focus ~ .site-search-button {
   position: relative;
 
   margin-right: 10px;
-  padding: 8px 0px 10px 46px;
+  padding: 8px 0 10px 46px;
 }
 
 .user-menu .user-login::before {
@@ -338,7 +339,7 @@ input[type="search"]:focus ~ .site-search-button {
   position: relative;
 
   margin-right: 20px;
-  padding: 8px 0px 10px 42px;
+  padding: 8px 0 10px 42px;
 }
 
 .user-menu .compare:before {
@@ -359,7 +360,7 @@ input[type="search"]:focus ~ .site-search-button {
   position: relative;
 
   margin-right: 0;
-  padding: 8px 0px 10px 44px;
+  padding: 8px 0 10px 44px;
 }
 
 .user-menu .basket:before {
@@ -493,23 +494,23 @@ input[type="search"]:focus ~ .site-search-button {
   cursor: pointer;
 }
 
-.site-navigation-items-container .view {
+.site-navigation-items .site-navigation-items-view {
   margin-right: 60px;
 }
 
-.site-navigation-items-container .fitness {
+.site-navigation-items .site-navigation-items-fitness {
   margin-right: 75px;
 }
 
-.view a:hover,
-.fitness a:hover,
-.quadrocopter a:hover {
+.site-navigation-items-view a:hover,
+.site-navigation-items-fitness a:hover,
+.site-navigation-items-quadrocopter a:hover {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.view a:active,
-.fitness a:active,
-.quadrocopter a:active {
+.site-navigation-items-view a:active,
+.site-navigation-items-fitness a:active,
+.site-navigation-items-quadrocopter a:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -788,10 +789,10 @@ input[type="search"]:focus ~ .site-search-button {
   position: absolute;
   top: 328px;
   left: 999px;
-  z-index: 5;
+  z-index: 1;
 
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
 
   background-image: url("../img/slider-button-empty.svg");
   background-repeat: no-repeat;
@@ -803,10 +804,10 @@ input[type="search"]:focus ~ .site-search-button {
   position: absolute;
   top: 328px;
   left: 1032px;
-  z-index: 5;
+  z-index: 1;
 
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
 
   background-image: url("../img/slider-button-empty.svg");
   background-repeat: no-repeat;
@@ -817,11 +818,11 @@ input[type="search"]:focus ~ .site-search-button {
   content: "";
   position: absolute;
   top: 328px;
-  right: -1077px;
-  z-index: 5;
+  left: 1065px;
+  z-index: 1;
 
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
 
   background-image: url("../img/slider-button-empty.svg");
   background-repeat: no-repeat;
@@ -833,10 +834,10 @@ input[type="search"]:focus ~ .site-search-button {
   position: absolute;
   top: 328px;
   left: 999px;
-  z-index: 5;
+  z-index: 1;
 
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
 
   background-image: url("../img/slider-button.svg");
   background-repeat: no-repeat;
@@ -849,10 +850,10 @@ input[type="search"]:focus ~ .site-search-button {
   position: absolute;
   top: 328px;
   left: 1032px;
-  z-index: 5;
+  z-index: 1;
 
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
 
   background-image: url("../img/slider-button.svg");
   background-repeat: no-repeat;
@@ -864,16 +865,22 @@ input[type="search"]:focus ~ .site-search-button {
   content: "";
   position: absolute;
   top: 328px;
-  right: -1077px;
-  z-index: 5;
+  left: 1065px;
+  z-index: 1;
 
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
 
   background-image: url("../img/slider-button.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0;
+}
+
+#popular-1:checked ~ .monopod::after,
+#popular-2:checked ~ .fitness-watch::after,
+#popular-3:checked ~ .quadrocopter::after {
+  opacity: 1;
 }
 
 .slider-monopod,
@@ -888,12 +895,6 @@ input[type="search"]:focus ~ .site-search-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-#popular-1:checked ~ .monopod::after,
-#popular-2:checked ~ .fitness-watch::after,
-#popular-3:checked ~ .quadrocopter::after {
-  opacity: 1;
 }
 
 .categories-goods {
@@ -940,7 +941,7 @@ input[type="search"]:focus ~ .site-search-button {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 0;
 
   width: 160px;
   height: 160px;
@@ -2217,6 +2218,8 @@ button.modal-feedback-close::after {
 }
 
 .feedback-form label {
+  display: block;
+
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
@@ -2233,15 +2236,27 @@ button.modal-feedback-close::after {
   width: 960px;
   height: 559px;
   margin-left: -480px;
+
+  background-image: url("../img//map-big.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
-.modal-map div {
+.map-image img {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 10;
 
   margin: 0;
+  padding: 0;
+}
+
+.modal-map .iframe {
+  position: relative;
+  z-index: 20;
+
+  border: none;
 }
 
 .modal-map-show {
@@ -2256,7 +2271,7 @@ button.modal-map-close {
   position: absolute;
   top: 22px;
   right: 22px;
-  z-index: 12;
+  z-index: 25;
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2777,6 +2792,8 @@ fieldset p {
 .filter label {
   position: relative;
 
+  display: block;
+  width: 200px;
   padding-left: 44px;
 
   font-weight: 300;
@@ -2935,15 +2952,15 @@ fieldset p {
 }
 
 .sorting-items-price {
-  margin-right: 28px;
+  width: 83px;
 }
 
 .sorting-items-type {
-  margin-right: 31px;
+  width: 83px;
 }
 
-.sorting-type {
-  margin-right: 260px;
+.sorting-items-popular {
+  width: 140px;
 }
 
 .sorting-direction {
@@ -2970,8 +2987,8 @@ fieldset p {
 .sorting-direction-items.up::before {
   content: "";
   position: absolute;
-  top: -4px;
-  right: 30px;
+  top: -5px;
+  right: -229px;
 
   width: 11px;
   height: 11px;
@@ -2985,8 +3002,8 @@ fieldset p {
 .sorting-direction-items.down::before {
   content: "";
   position: absolute;
-  top: -4px;
-  right: 0;
+  top: -5px;
+  right: -259px;
 
   width: 11px;
   height: 11px;
