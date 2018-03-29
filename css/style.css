@@ -443,8 +443,8 @@ input[type="search"]:focus ~ .site-search-button {
   opacity: 0.3;
 }
 
-.site-navigation-items ul,
-.site-navigation-items li {
+.site-navigation-items-container ul,
+.site-navigation-items-container li {
   margin: 0;
   padding: 0;
 
@@ -2679,7 +2679,7 @@ fieldset p {
   position: absolute;
   top: -24px;
   left: -4px;
-  z-index: 0;
+  z-index: 2;
 
   width: 20px;
   height: 23px;
@@ -2693,7 +2693,7 @@ fieldset p {
   position: absolute;
   top: -24px;
   left: -4px;
-  z-index: 0;
+  z-index: 2;
 
   width: 22px;
   height: 25px;
